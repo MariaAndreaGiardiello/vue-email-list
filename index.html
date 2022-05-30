@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <ul>
-            <li v-for="(email, index) in randomEmail[position]" @click="position = index">{{randomEmail}}</li>
+            <li v-for="(email, index) in randomEmail">{{randomEmail[index]}}</li>
         </ul>
     </div>
     <script src="js/main.js"></script>
