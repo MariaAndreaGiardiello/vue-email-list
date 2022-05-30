@@ -9,13 +9,13 @@ const app = new Vue({
     el: '#app',
     data: {
         randomEmail: [],
+        position: 0,
     },
     created () {
         for (let i = 0; i < 10; i++) {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((email) => {
-                this.randomEmail[i] = email.data.response; 
-                this.randomEmail.push(email.response);
+                this.randomEmail[i].push(email.data.response);
             })
         }
     }
